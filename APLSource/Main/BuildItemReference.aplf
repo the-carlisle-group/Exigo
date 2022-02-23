@@ -1,0 +1,6 @@
+ BuildItemReference←{
+     ⍝ ⍵ ←→ Info space
+     d←GetBasicDocs ⍵
+     h←A.DOM2HTML¨d
+     h nput¨⍵.TargetFolder∘,¨⍵.TargetFile
+ }
