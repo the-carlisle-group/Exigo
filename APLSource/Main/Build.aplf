@@ -1,5 +1,4 @@
  Build←{
-     ⎕THIS.A←#.Abacus.Main
      sr←'c:/APLProjects/FlipDBDoc/APLSource'
      td←'c:/FDBDocOut'
      sf←GetSourceFolders sr
