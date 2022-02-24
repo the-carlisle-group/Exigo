@@ -1,0 +1,8 @@
+ BuildFlipDB←{
+     sf←'c:/APLProjects/FlipDBDoc/APLSource'
+     tf←'c:/FDBDocOut'
+     _←##.Main.Build sf tf
+     ⎕←']open ',tf
+     ⎕←'#.Rumba.Core.Start ''',tf,''''
+     'Done'
+ }

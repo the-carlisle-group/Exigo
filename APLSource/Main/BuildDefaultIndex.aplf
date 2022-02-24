@@ -1,0 +1,13 @@
+ BuildDefaultIndex←{
+     sf←⍺.SourceFolder
+     h1←{⍵ A.ElementByTag'h1'}¨⍵
+     t←⊃¨h1.Content
+     n←⍺.Name
+     l←{A.New'a'⍵}¨⍺.Name
+     l.href←⍺.URL
+     e←{A.New'h2'⍵}¨l
+     c←e,⍨A.New'h1'⍺.FolderName
+     d←A.NewDocument c
+     h←A.DOM2HTML d
+     h nput ⍺.TargetFolder,'/',⍺.FolderName
+ }

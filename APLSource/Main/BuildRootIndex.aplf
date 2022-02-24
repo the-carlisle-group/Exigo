@@ -1,0 +1,6 @@
+ BuildRootIndex←{
+     sf tf←⍵
+     d←⊃⍺ GetBasicDocs sf,'/index.md'
+     h←A.DOM2HTML d
+     h nput tf,'/index'
+ }

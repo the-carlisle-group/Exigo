@@ -1,0 +1,11 @@
+ BuildObjectIndex←{
+     sf←⍺.SourceFolder
+     b←⍺.MemberType∊⊂'Class'
+     l←{A.New'a'⍵}¨b/⍺.Object
+     l.href←b/⍺.URL
+     e←{A.New'h2'⍵}¨l
+     c←e,⍨A.New'h1'⍺.FolderName
+     d←A.NewDocument c
+     h←A.DOM2HTML d
+     h nput ⍺.TargetFolder,'/',⍺.FolderName
+ }

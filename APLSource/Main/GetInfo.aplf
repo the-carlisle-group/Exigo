@@ -12,6 +12,7 @@
      p.Name←1⊃¨⎕NPARTS f
      p.Type←t
      p.BuildFunction←'Build',t
+     p.FolderName←1⊃⎕NPARTS ⍵
      p.ParentSegment←'/',(1⊃⎕NPARTS ⍵),'/'
      (⍎'GetInfo',t)p
  }
