@@ -1,0 +1,6 @@
+ SetReferences←{
+     ##.ObjectReference.M←⎕THIS
+     ##.ItemReference.M←⎕THIS
+     ##.UserGuide.M←⎕THIS
+     0
+ }

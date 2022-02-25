@@ -1,0 +1,8 @@
+ SetCSS←{
+     ⍝ ⍺←FolderName
+     hd←⍵ A.ElementByTag'head'
+     l←hd A.New'link'
+     l.rel←'stylesheet'
+     l.href←'/',⍺,'.css'
+     0
+ }

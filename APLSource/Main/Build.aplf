@@ -1,4 +1,5 @@
  Build←{
+     _←SetReferences 0
      sf tf←⍵
      i←GetInfo¨GetSourceFolders sf
      i.TargetFolder←⊂tf
@@ -6,6 +7,7 @@
      _←3 ⎕NDELETE tf
      _←3 ⎕MKDIR tf∘,¨i.ParentSegment
      _←''BuildRootIndex sf tf
-     _←{(⍎⍵.BuildFunction)⍵}¨i
+
+     _←{(⍵.Type ##.⍎'Build')⍵}¨i
      0
  }

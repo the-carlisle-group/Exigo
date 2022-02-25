@@ -1,4 +1,4 @@
- GetInfoObjectReference←{
+ GetInfo←{
      ⍝ ⍵ ←→ Info Space
      m←' '~¨⍨↑{⍵⊆⍨⍵≠'_'}¨⍵.Name
      ⍵.(Object MemberType MemberName)←↓⍉m

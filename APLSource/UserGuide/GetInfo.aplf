@@ -1,4 +1,4 @@
- GetInfoUserGuide←{
+ GetInfo←{
      ⍝ ⍵ ←→ Info space
      ⍝ ⍵ ←→ Info Space
      ⍵.URL←⍵.ParentSegment∘,¨⍵.Name

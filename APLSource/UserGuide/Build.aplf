@@ -1,0 +1,7 @@
+ Build←{
+     ⍝ Build a grouped and ordered collection
+     d←⍵.SiteMap M.GetBasicDocs ⍵.File
+     h←A.DOM2HTML¨d
+     _←h M.nput¨⍵.TargetFolder∘,¨⍵.TargetFile
+     ⍵ M.BuildTOC d
+ }

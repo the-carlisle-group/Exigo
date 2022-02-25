@@ -1,7 +1,0 @@
- BuildItemReference←{
-     ⍝ ⍵ ←→ Info space
-     d←⍵.SiteMap GetBasicDocs ⍵.File
-     h←A.DOM2HTML¨d
-     _←h nput¨⍵.TargetFolder∘,¨⍵.TargetFile
-     ⍵ BuildDefaultIndex d
- }

@@ -1,0 +1,9 @@
+ Build←{
+     ⍝ ⍵ ←→ Info space
+     d←⍵.SiteMap M.GetBasicDocs ⍵.File
+     _←⍵.FolderName∘M.SetCSS¨d
+     _←M.CopyCSSFile ⍵
+     h←A.DOM2HTML¨d
+     _←h M.nput¨⍵.TargetFolder∘,¨⍵.TargetFile
+     ⍵ M.BuildDefaultIndex d
+ }
