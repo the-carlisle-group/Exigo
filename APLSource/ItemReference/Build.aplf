@@ -4,6 +4,6 @@
      _←⍵.FolderName∘M.SetCSS¨d
      _←M.CopyCSSFile ⍵
      h←A.DOM2HTML¨d
-     _←h M.nput¨⍵.TargetFolder∘,¨⍵.TargetFile
+     _←⍵ M.PutFiles h
      ⍵ M.BuildDefaultIndex d
  }

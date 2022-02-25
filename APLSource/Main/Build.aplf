@@ -7,7 +7,6 @@
      _←3 ⎕NDELETE tf
      _←3 ⎕MKDIR tf∘,¨i.ParentSegment
      _←''BuildRootIndex sf tf
-
      _←{(⍵.Type ##.⍎'Build')⍵}¨i
      0
  }
