@@ -34,7 +34,7 @@ In the markdown, the URL of internal links my be omitted:
    The [ReadCSVFile]() method imports a CSV file.
 ~~~
 
-or by specifying only the tail end segement of the path:
+or may be specified using only the tail end segement of the path:
 
 ~~~
    It is very easy to [read CSV files](ReadCSVFile)
