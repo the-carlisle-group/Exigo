@@ -8,8 +8,9 @@
      m←c,[0.5](t,⊂'')[i]
      m←m,(⍺.URL,⊂'')[i]
      e←CreateTOCEntry¨↓m
-     d←A.NewDocument''
-     b←A.GetBody d
+     d←NewDocument''
+     _←SetCSS d
+     b←A.GetMain d
      _←b A.New'h1' 'Table of Contents'
      b.Content,←e
      h←A.DOM2HTML d

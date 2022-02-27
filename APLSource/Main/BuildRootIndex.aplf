@@ -1,6 +1,9 @@
  BuildRootIndex←{
      sf tf←⍵
-     d←⊃⍺ GetBasicDocs sf,'/index.md'
+     v←⊃ReadFiles⊂sf,'/index.md'
+     c←A.MD2DOM v
+     d←NewDocument c
+     _←SetCSS d
      h←A.DOM2HTML d
      h nput tf,'/index'
  }

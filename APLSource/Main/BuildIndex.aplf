@@ -1,0 +1,11 @@
+ BuildIndex←{
+     ⍝ ⍺ ←→ Target File, Header
+     ⍝ ⍵ ←→ Text, URL
+     l←A.NewLink¨↓⍉↑⍵
+     e←A.New¨'h2'∘{⍺ ⍵}¨l
+     c←e,⍨A.New'h1'(1⊃⍺)
+     d←NewDocument c
+     _←'Functions'SetCSS d
+     h←A.DOM2HTML d
+     h nput 0⊃⍺
+ }

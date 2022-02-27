@@ -1,4 +1,5 @@
  BuildObjectIndex←{
+     OBSOLETE
      sf←⍺.SourceFolder
      b←⍺.MemberType∊⊂'Class'
      l←{A.New'a'⍵}¨b/⍺.Object
@@ -6,6 +7,7 @@
      e←{A.New'h2'⍵}¨l
      c←e,⍨A.New'h1'⍺.FolderName
      d←A.NewDocument c
+     _←M.SetCSS d
      h←A.DOM2HTML d
      h M.nput ⍺.TargetFolder,'/',⍺.FolderName
  }

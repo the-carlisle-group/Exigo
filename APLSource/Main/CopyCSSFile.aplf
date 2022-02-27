@@ -1,6 +1,8 @@
  CopyCSSFile←{
-   ⍝ ⍵ ←→ Info Space
+     ⍝ ⍵ ←→ Info Space
      s←⍵.SourceFolder,'/',⍵.FolderName,'.css'
      t←⍵.TargetFolder,'/',⍵.FolderName,'.css '
-     t ⎕NCOPY s
+     ⎕NEXISTS s:t ⎕NCOPY s
+     s←A.ComposeRules ⍵.Type ##.⍎'CSS 0'
+     (⊂s)⎕NPUT nput t
  }

@@ -1,5 +1,6 @@
  SetCSS←{
      ⍝ ⍺←FolderName
+     ⍺←'Functions'
      hd←⍵ A.ElementByTag'head'
      l←hd A.New'link'
      l.rel←'stylesheet'

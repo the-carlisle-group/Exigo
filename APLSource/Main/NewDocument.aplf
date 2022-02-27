@@ -1,0 +1,5 @@
+ NewDocument←{
+     m←A.New'main'⍵
+    ⍝ Add header, footer etc
+     A.NewDocument m
+ }

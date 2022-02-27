@@ -1,0 +1,10 @@
+ WriteMemberList←{
+     ⍝ ⍺ ← Target Folder
+     ⍝ ⍵ ←→ Class, member type, members
+     c t m←⍵
+     0=≢m:0
+     u←(t,'/')∘,¨m
+     h←c,' ',t
+     f←⍺,c,'/',t
+     f h M.BuildIndex m u
+ }

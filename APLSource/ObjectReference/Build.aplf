@@ -1,9 +1,12 @@
  Build←{
      ⍝ ⍵ ←→ Info space
      _←CreateObjectFolders ⍵
-     d←⍵.SiteMap M.GetBasicDocs ⍵.File
+     d←M.GetBasicDocs ⍵
      _←⍵ AddMemberLinksToClass d
-     h←A.DOM2HTML¨d
-     _←⍵ M.PutFiles h
-     ⍵ BuildObjectIndex d
+     _←⍵.FolderName∘M.SetCSS¨d
+     _←M.CopyCSSFile ⍵
+     _←⍵ M.PutFiles d
+     b←⍵.MemberType∊⊂'Class'
+     f←⍵.TargetFolder,'/',⍵.FolderName
+     f ⍵.FolderName M.BuildIndex b∘/¨⍵.Object ⍵.URL
  }

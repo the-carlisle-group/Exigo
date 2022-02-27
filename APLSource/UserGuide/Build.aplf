@@ -1,7 +1,8 @@
  Build←{
      ⍝ Build a grouped and ordered collection
-     d←⍵.SiteMap M.GetBasicDocs ⍵.File
-     h←A.DOM2HTML¨d
-     _←⍵ M.PutFiles h
+     d←M.GetBasicDocs ⍵
+     _←⍵.FolderName∘M.SetCSS¨d
+     _←M.CopyCSSFile ⍵
+     _←⍵ M.PutFiles d
      ⍵ M.BuildTOC d
  }

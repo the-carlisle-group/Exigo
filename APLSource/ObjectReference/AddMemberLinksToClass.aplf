@@ -10,11 +10,11 @@
      p←(bv∧⊂mt∊⊂'Property')/¨⊂mn
      l←'Properties'∘CreateMemberLinks¨c{⍺ ⍵}¨p
      l,¨←'Methods'∘CreateMemberLinks¨c{⍺ ⍵}¨m
-     b←A.GetBody¨k/⍵
-     b.Content←l{(⊃⍵),⍺,1↓⍵}¨b.Content
+     b←A.GetMain¨k/⍵
+     b.Content←l{(3↑⍵),⍺,3↓⍵}¨b.Content
      ⍝ Precompute m and p in GetInfoObjectReference
      q←⍺.TargetFolder,⍺.ParentSegment
-     _←(q∘,¨c)WritePropList¨p    ⍝ MAKE ONE FN
-     _←(q∘,¨c)WriteMethodList¨m  ⍝ ....
+     _←q∘WriteMemberList¨c{⍺'Properties'⍵}¨p
+     _←q∘WriteMemberList¨c{⍺'Methods'⍵}¨m
      0
  }

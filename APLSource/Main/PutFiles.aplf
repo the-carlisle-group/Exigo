@@ -1,3 +1,6 @@
  PutFiles←{
-     ⍵ nput¨⍺.TargetFolder∘,¨⍺.TargetFile
+     ⍝ ⍺ ←→ Info space
+     ⍝ ⍵ ←→ DOM objects
+     h←A.DOM2HTML¨⍵
+     h nput¨⍺.TargetFolder∘,¨⍺.TargetFile
  }
