@@ -47,3 +47,22 @@ This behavior may be overridden by specifing more of the path as neccessary:
    The [Delete](/Database/Methods/Delete) method of the Database object imports a CSV file.
 ~~~
 
+## Building
+~~~
+#.Exigo.Admin.Build ''
+~~~
+
+We could have a view here too. Trivial really...
+
+Assume source folder is /APLSource/DocSource
+
+This builds the site and puts in in temp foider. The site can be checked out locally
+
+## Publishing
+To publish to Github Pages: 
+
+~~~
+#.Exigo.PublishGitHubPages ''
+~~~
+
+This builds the site and copies to root of gh-pages branch, commits and pushes, leaving you back on the branch where you were.
