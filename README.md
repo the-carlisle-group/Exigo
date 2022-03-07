@@ -48,15 +48,17 @@ This behavior may be overridden by specifing more of the path as neccessary:
 ~~~
 
 ## Building
+From docuumenation source project:
+
 ~~~
-#.Exigo.Admin.Build ''
+      #.Exigo.BuildSite ''
+⍝ Site folder
+]open C:/Users/paul/AppData/Local/Temp/Exigo
+⍝ To serve at local host:
+#.Rumba.Core.Start 'C:/Users/paul/AppData/Local/Temp/Exigo'
 ~~~
 
-We could have a view here too. Trivial really...
-
-Assume source folder is /APLSource/DocSource
-
-This builds the site and puts in in temp foider. The site can be checked out locally
+This builds the site and puts in in temp foider. It may then be copied to some target location. The site can be viewed locally.
 
 ## Publishing
 To publish to Github Pages: 
