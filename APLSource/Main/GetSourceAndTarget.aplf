@@ -1,0 +1,7 @@
+ GetSourceAndTarget←{
+     D←⎕SE.zApps.Dado.Dado.Main
+     p←⍵.AcreConfig.ProjectFolder
+     sf←p,'APLSource/DocSource'
+     tf←(D.GetTempDir''),'/Exigo'
+     sf tf
+ }

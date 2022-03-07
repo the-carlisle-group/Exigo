@@ -1,0 +1,16 @@
+ BuildSite←{
+     ⍝ ⍺ ←→ [Project Folder|Space]
+     ⍝ ⍵ ←→ ''
+     ⍺←0
+     D←⎕SE.zApps.Dado.Dado.Main
+     s←D.GetProjectSpace ⍺
+     sf tf←GetSourceAndTarget s
+     _←Build sf tf
+     ⎕←'⍝ Site folder:'
+     ⎕←']open ',tf
+     ⎕←''
+     ⎕←'⍝ To serve at local host:'
+     q←{'''',⍵,''''}
+     ⎕←'#.Rumba.Core.Start ',q tf
+     0
+ }

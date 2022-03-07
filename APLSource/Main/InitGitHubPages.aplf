@@ -1,7 +1,6 @@
  InitGitHubPages←{
      D←⎕SE.zApps.Dado.Dado.Main
-     ⍺←0
-     p←D.GetProjectFolder ⍺
+     p←⍺
      n←p D.RunGitCommand'branch --format="%(refname:short)"'
      (⊂'gh-pages')∊n:p D.RunGitCommand'checkout gh-pages'
      _←p D.RunGitCommand'checkout --orphan gh-pages'

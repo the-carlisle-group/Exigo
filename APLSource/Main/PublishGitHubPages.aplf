@@ -3,25 +3,21 @@
      ⍝ ⍵ ←→ Message
      ⍺←0
      D←⎕SE.zApps.Dado.Dado.Main
+     e←D.IsDirty 0
+     e:'Uncommitted changes, not published.'
      s←D.GetProjectSpace ⍺
-     p←s.AcreConfig.ProjectFolder
-     ⍝ MUST CHECK CURRENT BRANCH IS not dirty
-
-     sf←p,'APLSource/DocSource'    ⍝ Source folder
+     sf tf←GetSourceAndTarget s
      n←'/',s.AcreConfig._Name
-     tf←(D.GetTempDir''),'/Exigo'
-     _←n Build sf tf               ⍝ Build and Write out to site temp folder
-
-
-
+     _←n Build sf tf BuildSite
+     p←s.AcreConfig.ProjectFolder
      c←p D.GetCurrentBranch''
-     _←p InitGitHubPages''         ⍝ Checkout gh-page branch
-                                   ⍝ Delete all files
+     _←p InitGitHubPages''                      ⍝ Delete all files too?
+     'gh-pages'≢p D.GetCurrentBranch'':'Unable to checkout gh-pages branch'
      op←('Wildcard' 1)('IfExists' 'Replace')
      _←p(⎕NCOPY⍠op)tf,'/*'
      git←p∘D.RunGitCommand
      _←git'add --all'
-     _←git'commit -m "Publish"'
+     _←git'commit -m "Deployed with Exigo"'
      _←git'push origin gh-pages --force'
      _←p D.Checkout c
      0
