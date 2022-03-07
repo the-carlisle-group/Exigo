@@ -65,4 +65,6 @@ To publish to Github Pages:
 #.Exigo.PublishGitHubPages ''
 ~~~
 
-This builds the site and copies to root of gh-pages branch, commits and pushes, leaving you back on the branch where you were.
+This builds the site and copies the html files to the root of the gh-pages branch, commits and pushes,
+leaving you back on the branch where you were.
+If there is no gh-pages branch, one is created as an orphan branch, with only the final html files, and no source markdown files.
