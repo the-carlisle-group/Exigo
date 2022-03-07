@@ -58,7 +58,7 @@ From the documenation source project space:
 #.Rumba.Core.Start 'C:/Users/paul/AppData/Local/Temp/Exigo'
 ~~~
 
-This builds the site and puts in in temp foider. It may then be copied to some target location. The site can be viewed locally.
+This builds the site and puts in in temp folder. It may then be copied to some target location. The site can be viewed locally.
 
 ## Publishing
 From the documenation source project space:
