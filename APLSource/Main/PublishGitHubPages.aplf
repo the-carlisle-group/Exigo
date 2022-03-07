@@ -8,7 +8,7 @@
      s←D.GetProjectSpace ⍺
      sf tf←GetSourceAndTarget s
      n←'/',s.AcreConfig._Name
-     _←n Build sf tf BuildSite
+     _←n Build sf tf
      p←s.AcreConfig.ProjectFolder
      c←p D.GetCurrentBranch''
      _←p InitGitHubPages''                      ⍝ Delete all files too?
