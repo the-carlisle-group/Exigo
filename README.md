@@ -48,7 +48,7 @@ This behavior may be overridden by specifing more of the path as neccessary:
 ~~~
 
 ## Building
-From docuumenation source project:
+From the documenation source project space:
 
 ~~~
       #.Exigo.BuildSite ''
@@ -61,7 +61,7 @@ From docuumenation source project:
 This builds the site and puts in in temp foider. It may then be copied to some target location. The site can be viewed locally.
 
 ## Publishing
-To publish to Github Pages: 
+From the documenation source project space:
 
 ~~~
 #.Exigo.PublishGitHubPages ''
