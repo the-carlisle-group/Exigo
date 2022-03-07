@@ -6,6 +6,5 @@
      c←e,⍨A.New'h1'(1⊃⍺)
      d←NewDocument c
      _←'Functions'SetCSS d
-     h←A.DOM2HTML d
-     h nput 0⊃⍺
+     d PutFile 0⊃⍺
  }

@@ -1,0 +1,13 @@
+ AddBaseURL←{
+     ⍝ ⍺ ←→ BaseURL
+     ⍝ ⍵ ←→ Document(s)
+     ⍺←⎕THIS.BaseURL
+     ⍺≡'':0
+     d←A.New'fake'⍵
+     e←d A.Elements d
+     l←e/⍨e.Tag∊,¨'a' 'link'
+     0=≢l:0
+     r←l.href
+     l.href←(''⍺['/'=⊃¨r]),¨r
+     0
+ }

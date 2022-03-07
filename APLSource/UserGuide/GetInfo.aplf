@@ -1,7 +1,8 @@
  GetInfo←{
      ⍝ ⍵ ←→ Info space
      ⍝ ⍵ ←→ Info Space
-     ⍵.URL←⍵.ParentSegment∘,¨⍵.Name
-     ⍵.TargetFile←⍵.URL
+     p←⍵.ParentSegment∘,¨⍵.Name
+     ⍵.URL←p
+     ⍵.TargetFile←p
      ⍵
  }

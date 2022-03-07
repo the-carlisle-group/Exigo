@@ -1,8 +1,10 @@
  GetInfo←{
+     ⍝ ⍺ ←→ BaseURL: '', or /ProjectName f
      ⍝ ⍵ ←→ Source Directory
-     ⍝ GetInfoItemReference
-     ⍝ GetInfoObjectReference
-     ⍝ GetInfoUserGuide
+     ⍝ ***** Folder Types ******
+     ⍝ ##.ItemReference.GetInfo
+     ⍝ ##.ObjectReference.GetInfo
+     ⍝ ##.UserGuide.GetInfo
      a←⊃(⎕NINFO⍠1)⍵,'/*.*'
      t←GetFolderType a
      f←a/⍨'.md'∘≡¨2⊃¨⎕NPARTS a

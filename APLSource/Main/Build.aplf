@@ -1,12 +1,17 @@
  Build←{
+     ⍝ ⍺ ←→ BaseURL
+     ⍝ ⍵ ←→ Source Folder, Target Folder
+     ⍺←''
+     ⎕THIS.BaseURL←⍺
      _←SetReferences 0
      sf tf←⍵
      i←GetInfo¨GetSourceFolders sf
+     i.BaseURL←⊂⍺
      i.TargetFolder←⊂tf
      i.SiteMap←,/i.URL
      _←3 ⎕NDELETE tf
      _←3 ⎕MKDIR tf∘,¨i.ParentSegment
-     _←''BuildRootIndex sf tf
+     _←⍺ BuildRootIndex sf tf
      _←{(⍵.Type ##.⍎'Build')⍵}¨i
      0
  }

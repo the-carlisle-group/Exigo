@@ -5,7 +5,8 @@
      c←⍵.MemberType∊⊂'Class'
      i←'CMP'⍳⊃¨m[;1]
      m[;1]←'' 'Methods' 'Properties'[i]
-     ⍵.URL←⍵.ParentSegment∘,¨(-3*c)↓¨,/m,¨'/'
-     ⍵.TargetFile←⍵.URL,¨c⌿¨⊂'/index'
+     p←⍵.ParentSegment∘,¨(-3*c)↓¨,/m,¨'/'
+     ⍵.URL←p
+     ⍵.TargetFile←p,¨c⌿¨⊂'/index'
      ⍵
  }

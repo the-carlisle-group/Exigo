@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ Class, member list
      c m←⍵
      0=≢m:⍬
-     r←(c,'/',⍺,'/')∘,¨m
+     r←('/Objects/',c,'/',⍺,'/')∘,¨m
      l←A.NewLink¨m{⍺ ⍵}¨r
      p←A.New'p'l
      h←A.New'h2'⍺
