@@ -1,0 +1,31 @@
+ Build←{
+     ⍝ ←→ Source Folder, Target Folder
+     ⍺←''
+     sf tf←⍵
+     ⍝ _←InitTargetFolder tf
+     pi←##.Main.GetInfo sf,'/Posts'
+     oi←##.Main.GetInfo sf,'/Pages'
+
+
+
+     BuildPosts
+
+     a←⊃(⎕NINFO⍠1)⍵,'/*.*'
+     t←GetFolderType a
+     f←a/⍨'.md'∘≡¨2⊃¨⎕NPARTS a
+     p←⎕NS''
+     p.SourceFolder←⍵
+     p.File←f
+
+
+     ⎕THIS.BaseURL←⍺
+     .
+     ##.UserGuide.GetInfo
+     #.ToolOfThought.Main.BuildSite
+
+     ##.Main.GetBasicDocs
+     ##.Main.GetInfo
+
+
+
+ }

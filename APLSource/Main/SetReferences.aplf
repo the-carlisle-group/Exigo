@@ -2,5 +2,7 @@
      ##.ObjectReference.M←⎕THIS
      ##.ItemReference.M←⎕THIS
      ##.UserGuide.M←⎕THIS
+     ##.BlogPages.M←⎕THIS
+     ##.BlogPosts.M←⎕THIS
      0
  }

@@ -1,0 +1,5 @@
+ InitTargetFolder←{
+     _←3 ⎕NDELETE ⍵
+     _←3 ⎕MKDIR ⍵,'/posts'
+     0
+ }

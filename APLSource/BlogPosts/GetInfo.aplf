@@ -1,0 +1,9 @@
+ GetInfo←{
+     ⍝ ⍵ ←→ Info space
+     ⍝ ⍵ ←→ Info Space
+     p←⍵.ParentSegment∘,¨10↓¨⍵.Name
+     ⍵.URL←p
+     ⍵.TargetFile←p
+     ⍵.PostDate←1⊃'P'⎕VFI 1↓,⍉9↑⍉↑⍵.Name
+     ⍵
+ }

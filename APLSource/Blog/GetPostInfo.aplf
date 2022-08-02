@@ -1,0 +1,15 @@
+ GetPostInfo←{
+     pf←⍵,'/Posts'
+     a←⊃(⎕NINFO⍠1)pf,'/*.*'
+     f←a/⍨'.md'∘≡¨2⊃¨⎕NPARTS a
+     p←⎕NS''
+     p.SourceFolder←pf
+     p.File←f
+     p.Name←1⊃¨⎕NPARTS f
+     p.Type←##.Main.GetFolderType
+     p.FolderName←1⊃⎕NPARTS ⍵
+     p.ParentSegment←'/',(1⊃⎕NPARTS ⍵),'/'
+     (t ##.⍎'GetInfo')p
+
+
+ }

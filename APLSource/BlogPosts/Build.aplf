@@ -1,0 +1,10 @@
+ Build←{
+     ⍝ ⍵ ←→ Info space
+     d←M.GetBasicDocs ⍵
+     m←A.GetMain¨d
+     h4←A.New¨{'time'⍵}¨⍕¨⍵.PostDate
+     m.Content←h4{(⊃⍵),⍺,1↓⍵}¨m.Content
+     _←⍵.FolderName∘M.SetCSS¨d
+     _←M.CopyCSSFile ⍵
+     _←⍵ M.PutFiles d
+     0}

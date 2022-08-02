@@ -1,6 +1,8 @@
  BuildRootIndex←{
      sf tf←⍵
-     v←⊃ReadFiles⊂sf,'/index.md'
+     n←sf,'/index.md'
+     ~⎕NEXISTS n:0
+     v←⊃ReadFiles⊂n
      c←A.MD2DOM v
      d←NewDocument c
      _←SetCSS d

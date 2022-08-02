@@ -1,6 +1,9 @@
  GetFolderType←{
      ⍝ ⍵ ←→ Content File Names
-     '_'∊⊃⍵:'ObjectReference'
-     ∨/∨/'/_TOC.'⍷↑⍵:'UserGuide'
+     p n x←↓⍉↑⎕NPARTS ⍵
+     'P'∧.=⊃¨n:'BlogPosts'
+     (⊂'_BlogMenu')∊n:'BlogPages'
+     '_'∊⊃n:'ObjectReference'
+     (⊂'_TOC')∊n:'UserGuide'
      'ItemReference'
  }

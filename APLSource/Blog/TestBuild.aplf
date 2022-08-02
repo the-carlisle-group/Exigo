@@ -1,0 +1,8 @@
+ TestBuild←{
+     sf←'c:\APLProjects\ToolOfThought\APLSource\Blog'
+     tf←'c:\mytemp\BlogTest'
+     ##.Main.Build sf tf
+
+
+
+ }

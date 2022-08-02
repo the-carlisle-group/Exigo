@@ -4,5 +4,5 @@
      t←⍵.TargetFolder,'/',⍵.FolderName,'.css '
      ⎕NEXISTS s:t ⎕NCOPY s
      s←A.ComposeRules ⍵.Type ##.⍎'CSS 0'
-     (⊂s)⎕NPUT nput t
+     (⊂s)⎕NPUT t
  }

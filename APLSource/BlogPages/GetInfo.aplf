@@ -1,0 +1,8 @@
+ GetInfo←{
+     ⍝ ⍵ ←→ Info space
+     ⍝ ⍵ ←→ Info Space
+     p←'/',¨⍵.Name
+     ⍵.URL←p
+     ⍵.TargetFile←p
+     ⍵
+ }
