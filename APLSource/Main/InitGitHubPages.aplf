@@ -4,8 +4,8 @@
      n←p D.RunGitCommand'branch --format="%(refname:short)"'
      (⊂'gh-pages')∊n:p D.RunGitCommand'checkout gh-pages'
      _←p D.RunGitCommand'checkout --orphan gh-pages'
-     _←P D.RunGitCommand'rm -rf .'
-     _←p.RunGitCommand'commit --allow-empty -m "Initialize gh-pages branch"'
+     _←p D.RunGitCommand'rm -rf .'
+     _←p D.RunGitCommand'commit --allow-empty -m "Initialize gh-pages branch"'
      _←p D.Push''
      0
  }

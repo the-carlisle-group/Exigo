@@ -2,8 +2,8 @@
      ⍝ ⍵ ←→ Info Space
      m←' '~¨⍨↑{⍵⊆⍨⍵≠'_'}¨⍵.Name
      ⍵.(Object MemberType MemberName)←↓⍉m
-     c←⍵.MemberType∊⊂'Class'
-     i←'CMP'⍳⊃¨m[;1]
+     i←'OMP'⍳⊃¨⍵.MemberType
+     c←i=0
      m[;1]←'' 'Methods' 'Properties'[i]
      p←⍵.ParentSegment∘,¨(-3*c)↓¨,/m,¨'/'
      ⍵.URL←p

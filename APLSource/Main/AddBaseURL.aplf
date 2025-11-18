@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ Document(s)
      ⍺←⎕THIS.BaseURL
      ⍺≡'':0
-     e←A.Elements ⍵
+     e←∊A.Elements¨⍵
      l←e/⍨e.Tag∊,¨'a' 'link'
      0=≢l:0
      r←l.href

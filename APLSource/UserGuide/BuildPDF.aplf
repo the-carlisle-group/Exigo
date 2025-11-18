@@ -1,0 +1,23 @@
+ BuildPDF←{
+     ⍝ ⍵ ←→ Document Folder
+     ⍝ ← ←→ DOM
+
+     a←⊃(⎕NINFO⍠1)⍵,'/*.*'
+     f←a/⍨'.md'∘≡¨2⊃¨⎕NPARTS a
+
+
+
+     c←⊃⎕NGET(⍵,'/_TOC.charmat')1
+     sl←~' '∊0⌷⍉↑c ⍝ Single level
+     c←((4×sl)⍴' ')∘,¨c ⍝ Fake it
+
+
+
+
+
+     p←⎕NS''
+
+
+
+
+ }
