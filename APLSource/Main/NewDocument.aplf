@@ -1,4 +1,5 @@
  NewDocument←{
+     OBSOLETE
      m←A.New'main'⍵
      A.NewDocument m
  }

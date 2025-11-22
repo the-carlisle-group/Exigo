@@ -1,7 +1,9 @@
  GetBasicDocs←{
      v←ReadFiles ⍵.File
      c←⍵.File{0::⎕←⍺ ⋄ A.MD2DOM ⍵}¨v
-     d←NewDocument¨c
+     d←⍵.ProjectSpace.DocSource.BuildTemplate¨(≢c)⍴⊂''
+     m←A.GetMain¨d
+     m.Content←c
      d.URL←⍵.URL
      _←⍵.SiteMap∘ResolveLinks¨d
      d

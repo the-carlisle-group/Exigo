@@ -1,10 +1,18 @@
  BuildRootIndex←{
-     sf tf←⍵
-     n←sf,'/index.md'
+     sf tf s←⍵
+     n←sf,'/HomePageContent.md'
      ~⎕NEXISTS n:0
      v←⊃ReadFiles⊂n
      c←A.MD2DOM v
-     d←NewDocument c
-     _←SetCSS d
+     d←s.DocSource.BuildTemplate 0
+     m←A.GetMain d
+     i←m A.New'img'
+     i.src←'/Images/PuzzleLight.svg'
+     i.style←'float:right;margin-top:.5rem;margin-left:.5rem'
+     i.height←'200px'
+     i.width←'auto'
+     p←3⊃c
+     p.Content←(1↑p.Content),i,1↓p.Content
+     m.Content←c ⍝ (1↑c),i,1↓c
      d PutFile tf,'/index'
  }

@@ -1,4 +1,5 @@
  SetCSS←{
+     OBSOLETE
      ⍝ ⍺←FolderName
      ⍺←'Functions'
      hd←⍵ A.ElementByTag'head'

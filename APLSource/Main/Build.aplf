@@ -4,14 +4,17 @@
      ⍺←''
      ⎕THIS.BaseURL←⍺
      _←SetReferences 0
-     sf tf←⍵
+     sf tf s←⍵
      i←GetInfo¨GetSourceFolders sf
+     i.ProjectSpace←s
      i.BaseURL←⊂⍺
      i.TargetFolder←⊂tf
      i.SiteMap←,/i.URL
      _←3 ⎕NDELETE tf
      _←3 ⎕MKDIR tf∘,¨i.ParentSegment
-     _←⍺ BuildRootIndex sf tf
+     _←⍺ BuildRootIndex sf tf s
+     _←(⊂A.ComposeRules s.DocSource.CSS 0)⎕NPUT tf,'/exigo.css'
      _←{(⍵.Type ##.⍎'Build')⍵}¨i
+     _←(tf,'/Images')⎕NCOPY'Images',⍨∊'/',⍨¨¯2↓'/'(≠⊆⊢)sf
      0
  }

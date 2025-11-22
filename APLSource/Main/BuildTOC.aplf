@@ -1,20 +1,19 @@
  BuildTOC←{
      sf←⍺.SourceFolder
-     c←⊃⎕NGET(sf,'/_TOC.charmat')1
+     c←⊃⎕NGET(sf,'/_TOC.charlist')1
      sl←~' '∊0⌷⍉↑c ⍝ Single level
      c←((4×sl)⍴' ')∘,¨c ⍝ Fake it
 
-     h1←{⍵ A.ElementByTag'h1'}¨⍵
+     h1←{⍵ A.GetElementByTag'h1'}¨⍵
      t←⊃¨h1.Content
      n←⍺.Name
      i←('    '∘,¨n)⍳c
      m←c,[0.5](t,⊂'')[i]
      m←m,(⍺.URL,⊂'')[i]
      e←CreateTOCEntry¨↓m
-     d←NewDocument''
-     _←SetCSS d
+     d←⍺.ProjectSpace.DocSource.BuildTemplate''
      b←A.GetMain d
      _←b A.New'h1' 'Table of Contents'
-     b.Content,←e
+     _←b A.New'nav'e
      d PutFile ⍺.TargetFolder,'/',⍺.FolderName
  }

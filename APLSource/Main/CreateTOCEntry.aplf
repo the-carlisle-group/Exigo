@@ -1,5 +1,5 @@
  CreateTOCEntry←{
      c d u←⍵
      ' '≠⊃c:A.New'h2'c
-     A.New'h3'(A.NewLink d u)
+     A.NewLink d u
  }

@@ -1,8 +1,6 @@
  Build←{
      ⍝ Build a grouped and ordered collection
      d←M.GetBasicDocs ⍵
-     _←⍵.FolderName∘M.SetCSS¨d
-     _←M.CopyCSSFile ⍵
      _←⍵ M.PutFiles d
      ⍵ M.BuildTOC d
  }

@@ -1,10 +1,10 @@
  BuildIndex←{
      ⍝ ⍺ ←→ Target File, Header
      ⍝ ⍵ ←→ Text, URL
-     l←A.NewLink¨↓⍉↑⍵
-     e←A.New¨'h2'∘{⍺ ⍵}¨l
-     c←e,⍨A.New'h1'(1⊃⍺)
-     d←NewDocument c
-     _←'Functions'SetCSS d
+     d←#.Abacus.DocSource.BuildTemplate''
+     m←A.GetMain d
+     _←m A.New'h1'(1↓∊' ',¨{(⍵∊⎕A)⊂⍵}1⊃⍺)
+     n←m A.New'nav'
+     l←n A.NewLink¨↓⍉↑⍵
      d PutFile 0⊃⍺
  }

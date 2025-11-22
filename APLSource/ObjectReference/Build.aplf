@@ -2,9 +2,8 @@
      ⍝ ⍵ ←→ Info space
      _←CreateObjectFolders ⍵
      d←M.GetBasicDocs ⍵
+
      _←⍵ AddMemberLinksToClass d
-     _←⍵.FolderName∘M.SetCSS¨d
-     _←M.CopyCSSFile ⍵
      _←⍵ M.PutFiles d
      b←⍵.MemberType∊⊂'Object'
      f←⍵.TargetFolder,'/',⍵.FolderName

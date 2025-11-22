@@ -5,7 +5,7 @@
      D←⎕SE.zApps.Dado.Dado.Main
      s←D.GetProjectSpace ⍺
      sf tf←GetSourceAndTarget s
-     _←Build sf tf
+     _←Build sf tf s
      ⎕←'⍝ Site folder:'
      ⎕←']open ',tf
      ⎕←''

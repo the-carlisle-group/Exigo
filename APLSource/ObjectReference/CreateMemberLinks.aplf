@@ -5,7 +5,8 @@
      0=≢m:⍬
      r←('/ObjectReference/',c,'/',⍺,'/')∘,¨m
      l←A.NewLink¨m{⍺ ⍵}¨r
-     p←A.New'p'l
-     h←A.New'h2'⍺
+     p←A.New'nav'l
+     p.class←'member-list'
+     h←A.New'h3'⍺
      h,p
  }

@@ -1,4 +1,5 @@
  CopyCSSFile←{
+     OBSOLETE
      ⍝ ⍵ ←→ Info Space
      s←⍵.SourceFolder,'/',⍵.FolderName,'.css'
      t←⍵.TargetFolder,'/',⍵.FolderName,'.css '

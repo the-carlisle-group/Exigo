@@ -1,8 +1,6 @@
  Build←{
      ⍝ ⍵ ←→ Info space
      d←M.GetBasicDocs ⍵
-     _←⍵.FolderName∘M.SetCSS¨d
-     _←M.CopyCSSFile ⍵
      _←⍵ M.PutFiles d
      f←⍵.TargetFolder,'/',⍵.FolderName
      f ⍵.FolderName M.BuildIndex ⍵.Name ⍵.URL

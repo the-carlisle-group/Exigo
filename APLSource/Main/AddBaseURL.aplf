@@ -4,9 +4,15 @@
      ⍺←⎕THIS.BaseURL
      ⍺≡'':0
      e←∊A.Elements¨⍵
-     l←e/⍨e.Tag∊,¨'a' 'link'
-     0=≢l:0
-     r←l.href
-     l.href←(''⍺['/'=⊃¨r]),¨r
+     _←⍺{
+         0=≢⍵:0
+         r←⍵.href
+         ⍵.href←(''⍺['/'=⊃¨r]),¨r
+         0}e/⍨e.Tag∊,¨'a' 'link'
+     _←⍺{
+         0=≢⍵:0
+         r←⍵.src
+         ⍵.src←(''⍺['/'=⊃¨r]),¨r
+         0}e/⍨e.Tag∊⊂'img'
      0
  }
